@@ -475,7 +475,7 @@
 }***/
 
 .hero-bg-half-1 {
-    background-image: url(header-2.jpeg);
+    background-image: url(../header-2.jpeg);
     filter: grayscale(15%);
     transform: scale(100% - 50%);
     background-position: center;
@@ -489,7 +489,7 @@
 }
 
 .hero-bg-half-2 {
-    background-image: url(header-4.jpg);
+    background-image: url(../header-4.jpg);
     filter: grayscale(15%);
     transform: scale(100% - 50%);
     background-position: center;
@@ -504,7 +504,7 @@
 
 @media (max-width: 991px) {
     .hero-bg-half-1 {
-        background-image: url(header-2.jpeg);
+        background-image: url(../header-2.jpeg);
         filter: grayscale(0%);
         transform: scale(100% - 0%);
         background-position: center;
@@ -518,7 +518,7 @@
     }
 
     .hero-bg-half-2 {
-        background-image: url(header-4.jpg);
+        background-image: url(../header-4.jpg);
         filter: grayscale(0%);
         transform: scale(100% - 0%);
         background-position: center;
