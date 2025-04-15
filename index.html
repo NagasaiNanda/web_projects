@@ -1852,8 +1852,57 @@ Event management company in the region.</p>
 			
         </div>
         <!-- Copyright End -->
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+	 <style>
+    /* Floating WhatsApp Icon */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
 
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float i {
+      margin-top: 2px;
+    }
+
+    /* Optional: Add a tooltip */
+    .whatsapp-tooltip {
+      position: fixed;
+      bottom: 90px;
+      left: 20px;
+      background-color: #444;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: none;
+      z-index: 1001;
+    }
+
+    .whatsapp-float:hover + .whatsapp-tooltip {
+      display: block;
+    }
+  </style>
+<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+ <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
        <div class="back-to-top" >
             <a href="#" class="btn" style="margin-bottom:-20px;"><i class="fa fa-arrow-up"></i></a>  
         </div>  
