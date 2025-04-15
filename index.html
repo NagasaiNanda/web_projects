@@ -347,13 +347,93 @@
 
 		
 		</style>
-		
+<style>
+    
+ 
+    #preloader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: Center;
+      gap: 50px;
+	
+    }
+
+    #preloader img {
+	
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+	 
+    }
+
+    .left-img {
+      animation: slideLeft 1s forwards;
+    }
+
+    .center-img {
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
+    }
+
+    .right-img {
+      animation: slideRight 1s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes slideLeft {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideRight {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    #content {
+      
+    }
+
+    
+  </style>		
 	
     </head>
 
     <body>
 
-        <!-- Spinner Start -->
+        <!-- Spinner Start 
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             
 			<div class="spinner-border text-primary" style="height:200px; width:200px;" role="status">
@@ -361,8 +441,25 @@
             </div>
         </div>
         <!-- Spinner End -->
-		
+	<div id="preloader">
+    <img src="logo.png" class="left-img" alt="Left Image">
+    <img src="logo.png" class="center-img" alt="Center Image">
+    <img src="logo.png" class="right-img" alt="Right Image">
+  </div>
+	    <script>
+    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      const content = document.getElementById("content");
 
+      // Delay to let the animations play
+      setTimeout(() => {
+        preloader.style.display = "none";
+        content.style.display = "block";
+        document.body.style.overflow = "auto"; // allow scrolling again
+      }, 2000);
+    });
+  </script>
+<div id="content">
         <!-- Navbar & Hero Start -->
           <header class="head1">
             <nav class="nav1 container1">
@@ -1903,8 +2000,7 @@ allValues.forEach((singleValue) => {
     document.getElementById("myForm").style.display="none";
   }
 </script>
-</body>
-</html>
+
 
         
         <!-- JavaScript Libraries -->
@@ -1918,6 +2014,7 @@ allValues.forEach((singleValue) => {
 
         <!-- Template Javascript -->
         <script src="main.js"></script>
+</div>
     </body>
 
 </html>
