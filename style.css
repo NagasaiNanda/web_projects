@@ -610,7 +610,6 @@
         top: 0;
         right: -400px;
         background: #57a2d6;
-        transform: skew(50deg);
     }
 
 
@@ -648,14 +647,14 @@
 
 .about .tab-class .nav .nav-item a {
     position: relative;
-    transform: skew(18deg);
+
     text-align: center;
     background: var(--bs-white);
     color: var(--bs-dark);
 }
 
 .about .tab-class .nav .nav-item a span {
-    transform: skew(-18deg);
+    
 }
 
 .about .tab-class .nav .nav-item a.active {
