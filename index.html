@@ -451,15 +451,22 @@
         height: 60px;
       }
     }
-    
+     }
+.video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
   </style>		
 	
     </head>
 
-    <body style="background-image: url('background2.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+    <body >
 
     <script src="https://cdn.tailwindcss.com"></script>
 	<div id="preloader">
@@ -792,8 +799,11 @@ addEventListener('resize', removeStyle)
         <!-- Carousel Start -->
         <div class="header-carousel owl-carousel overflow-hidden bg-dark">
             <div class="header-carousel-item hero-section">
-               <div class="hero-bg-half-1" style="background-image: url('header-2.jpeg');background-repeat: no-repeat;">
-			   </div>
+               <div class="hero-bg-half-1" ">
+			   <video class="video-bg " autoplay muted loop playsinline>
+    <source src="img/kkeneterprises.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video> </div>
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row g-4 align-items-center">
@@ -813,7 +823,7 @@ addEventListener('resize', removeStyle)
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item hero-section">
+            <!--<div class="header-carousel-item hero-section">
                 <div class="hero-bg-half-2"style="background-image: url('header-4.jpg');background-repeat: no-repeat;"></div>
                 <div class="carousel-caption">
                     <div class="container">
@@ -827,13 +837,13 @@ addEventListener('resize', removeStyle)
                                      <!--<div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
                                         <a class="btn btn-dark py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> <span>Watch Video</span></a>
                                         <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="#"><span>Learn More</span></a>
-                                    </div> -->
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> >--
         </div>
         <!-- Carousel End -->
    <!-- Blog Start -->
